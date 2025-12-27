@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvi6jtk7v562s"]
+
+[ext_resource type="Script" uid="uid://dqi317xun70rk" path="res://addons/gdscript-course-builder/ui/LessonContentBlock.gd" id="1_ox7nv"]
+
+[node name="TextEditDialog" type="Window"]
+oversampling_override = 1.0
+position = Vector2i(4, 4)
+size = Vector2i(1916, 1076)
+script = ExtResource("1_ox7nv")
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Margin/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="Margin/Layout/Buttons"]
+layout_mode = 2
+text = "OK"
+
+[node name="Padding" type="Control" parent="Margin/Layout/Buttons"]
+layout_mode = 2
+
+[node name="CancelButton" type="Button" parent="Margin/Layout/Buttons"]
+layout_mode = 2
+text = "Cancel"
